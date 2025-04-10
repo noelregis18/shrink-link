@@ -16,6 +16,10 @@ export const Footer = () => {
           <div className="text-center text-sm text-muted-foreground">
             &copy; {new Date().getFullYear()} ShrinkLink. All rights reserved.
           </div>
+          
+          <div className="text-center text-sm text-muted-foreground">
+            Designed and developed by Noel Regis
+          </div>
         </div>
       </div>
     </footer>

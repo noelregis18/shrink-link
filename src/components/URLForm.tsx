@@ -59,7 +59,7 @@ export const URLForm = ({ onUrlShortened }: URLFormProps) => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="flex flex-col gap-4 w-full max-w-3xl">
+    <form onSubmit={handleSubmit} className="flex flex-col gap-4 w-full max-w-3xl mx-auto">
       <div className="relative flex items-center">
         <div className="absolute left-3 text-muted-foreground">
           <Link size={18} />

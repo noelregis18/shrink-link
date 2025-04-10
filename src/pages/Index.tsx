@@ -41,7 +41,7 @@ const Index = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
             >
-              <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight max-w-3xl">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight max-w-3xl mx-auto">
                 Transform Long URLs into{" "}
                 <span className="gradient-text">Short Links</span>
               </h1>
@@ -55,7 +55,7 @@ const Index = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="w-full"
+              className="w-full flex justify-center"
             >
               <URLForm onUrlShortened={handleUrlShortened} />
             </motion.div>
