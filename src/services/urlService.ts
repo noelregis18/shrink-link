@@ -13,13 +13,19 @@ export type ShortenedURL = {
 // In-memory storage for URLs (In a real app, this would be a database)
 const urlStorage: Record<string, ShortenedURL> = {};
 
-// Base URL for shortened links
-const BASE_URL = window.location.origin;
+// Base URL for shortened links - removing "lovable" from the domain
+const getBaseUrl = () => {
+  const url = new URL(window.location.href);
+  // Extract the current domain but remove lovable.app if present
+  const domain = url.host.replace(/\.lovable\.app$/, '');
+  // Construct the base URL with the appropriate protocol
+  return `${url.protocol}//${domain}`;
+};
 
 // Generate a shortened URL
 export const shortenUrl = (originalUrl: string): ShortenedURL => {
   const id = nanoid(8); // Generate an 8 character unique ID
-  const shortUrl = `${BASE_URL}/s/${id}`;
+  const shortUrl = `${getBaseUrl()}/s/${id}`;
   const newUrl: ShortenedURL = {
     id,
     originalUrl,
