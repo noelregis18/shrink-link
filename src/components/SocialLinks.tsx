@@ -1,5 +1,5 @@
 
-import { LinkedIn, Github, Twitter, Mail, Phone, MapPin, ExternalLink } from "lucide-react";
+import { Linkedin, Github, Twitter, Mail, Phone, MapPin, ExternalLink } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 interface SocialLinkProps {
@@ -30,7 +30,7 @@ export const SocialLinks = () => {
     <div className="flex flex-col sm:flex-row flex-wrap gap-4 justify-center items-center">
       <SocialLink 
         href="https://www.linkedin.com/in/noel-regis-aa07081b1/" 
-        icon={<LinkedIn size={18} />} 
+        icon={<Linkedin size={18} />} 
         label="LinkedIn" 
       />
       <SocialLink 
